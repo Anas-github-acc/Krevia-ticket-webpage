@@ -1,1 +1,1 @@
-kreivaXalfaaz ticket page
+<center>kreivaXalfaaz ticket page</center>
