@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dd82ae3261.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>    
+    <div class="ticket-container">
+        <div class="ticket-booking">
+            <div class="img-container">
+                <img src="src/krevia_x_alfaaz.png" alt="loading..." width="150">
+            </div>
+            <div class="event-details">
+                <p class="heading">Krevia X Alfaaz</p>
+                <p>2024</p>
+                <p>Sat, 6 April | 11.00 AM</p>
+                <p>Sector 11, Gandhinagar,</p>
+                <p>Gujarat</p>
+            </div>
+            <div class="location-section">
+                <div></div>
+                <div class="rectangle-nav location"><a href="https://maps.google.com" target="_blank">Tap for location directions</a></div>
+                <div></div>
+            </div>
+            <div class="qr-ticket">
+                <div class="name">My Name</div>
+                <div class="ticket-count">1 Ticket (Student)</div>
+                <label class="qr-code" >
+                    <input type="checkbox" class="switch-input"/>
+                    <img src="src/qr_code.svg" alt="qr-code" class="qr-code" width="100%"/>
+                </label>
+                <!-- <img src="src/qr_code.svg" alt="loading..." class="qr-code" width="100px"/> -->
+                <div class="booking-id">BOOKING ID: 104697547461949457</div>
+            </div>
+            <div class="follow-us"><span class="hr-line"></span>FOLLOW US<span class="hr-line"></span></div>
+            <div class="follow-us-section">
+                <div class="rectangle-nav">
+                    <a href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    <a href="https://www.twiiter.com/home"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+                    <a href="https://wwww.facebook.com"><i class="fa-brands fa-facebook fa-xl"></i></a>
+                </div>
+            </div>
+            <div class="location-section dashed">
+                <div></div>
+                <div class="dashed-line"></div>
+                <div></div>
+            </div>
+            <div class="pricing-container">
+                <i class="triangle"></i>
+                <div class="ticket-pricing">
+                    <div class="heading">
+                        <div class="head">Total Amount <span class="saved">₹690 saved</span></div><span>Rs.0.00</span>
+                    </div>
+                    <p>Ticket Price (1) <span>Rs.600.00</span></p>
+                    <p>Platform fee <span>Rs.90.00</span></p>
+                    <p>IIITY student discount <span>-Rs.690.00</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-container">
+            <i class="triangle"></i>
+            <div class="ticket-pricing">
+                <div class="heading">
+                    <div class="head">Total Amount <span class="saved">₹690 saved</span></div><span>Rs.0.00</span>
+                </div>
+                <p>Ticket Price (1) <span>Rs.600.00</span></p>
+                <p>Platform fee <span>Rs.90.00</span></p>
+                <p>IIITY student discount <span>-Rs.690.00</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        function drawLine(w, h) {
+            let hr = document.getElementsByClassName("hr-line");
+            for (let i = 0; i < hr.length; i++) {
+                hr[i].style.width = w;
+                hr[i].style.height = h;
+            }
+        }
+        $(document).ready( function(){
+            drawLine("23%", "1px");
+        })
+        $(".follow-us").mouseover(function() {
+            drawLine(0, 0);
+        });
+        $(".follow-us").mouseleave(function() {
+            drawLine("23%", "1px");
+        });
+        // $(document).ready( function(){
+        //     $('.qr-code').click( function() {
+        //         var toggleWidth = $(".qr-code").width() == 800 ? "0px" : "800px";
+        //         $('.qr-code').animate({ width: toggleWidth });
+        //     });
+        //     // $('.qr-code').click( function() {
+        //     //     $('.toggle.two').toggleClass('hot');
+        //     // });
+        // });
+    </script>
+</body>
+</html>
